@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
 import { IMenu } from '../../interfaces/menu.interface';
-import { NewsService } from '../../services/news.service';
-import { BannerService } from '../../services/banner.service';
 
 @Component({
 	selector: 'app-header',
@@ -11,9 +9,9 @@ import { BannerService } from '../../services/banner.service';
 })
 export class HeaderComponent implements OnInit {
 
-	private menuList: IMenu[];
+	public menuList: IMenu[];
 
-	constructor(private menuService: MenuService, private newsService: NewsService, private bannerService: BannerService) {}
+	constructor(private menuService: MenuService) {}
 
 	ngOnInit(): void {
 		this.menuService.getMenuList().subscribe(res => {
