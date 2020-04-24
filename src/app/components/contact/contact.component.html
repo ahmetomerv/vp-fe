@@ -7,60 +7,62 @@
 		</div>
 	</div>
 	<div class="contact-row contact-form">
-		<div class="row">
-			<div class="col">
-				<label for="form-reason">Reason</label>
-				<select class="custom-select" id="form-reason">
-					<option selected>Select...</option>
-					<option value="1">One</option>
-					<option value="2">Two</option>
-					<option value="3">Three</option>
-				</select>
-			</div>
-			<div class="col">
-				<label for="form-phone">Phone</label>
-				<input id="form-phone" type="number" class="form-control">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-				<label for="form-nameSurname">Name Surname</label>
-				<input id="form-nameSurname" type="text" class="form-control">
-			</div>
-			<div class="col">
-				<label for="form-country">Country</label>
-				<select class="custom-select" id="form-country">
-					<option selected>Select...</option>
-					<option value="1">One</option>
-					<option value="2">Two</option>
-					<option value="3">Three</option>
-				</select>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-				<label for="form-email">Email</label>
-				<input id="form-email" type="email" class="form-control">
-			</div>
-			<div class="col">
-				<label for="form-address">Address</label>
-				<input id="form-address" type="text" class="form-control">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-				<div class="form-group">
-					<label for="form-message">Message</label>
-					<textarea class="form-control" rows="4" id="form-message"></textarea>
+		<form [formGroup]="contactForm">
+			<div class="row">
+				<div class="col">
+					<label for="form-reason">Reason</label>
+					<select class="custom-select" formControlName="Reason" id="form-reason" required>
+						<option selected>Select...</option>
+						<option value="1">One</option>
+						<option value="2">Two</option>
+						<option value="3">Three</option>
+					</select>
+				</div>
+				<div class="col">
+					<label for="form-phone">Phone</label>
+					<input id="form-phone" formControlName="Phone" type="number" class="form-control" required>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-				<div class="form-group form-button-container">
-					<button class="main-button" (click)="sendFormClick()">SEND</button>
+			<div class="row">
+				<div class="col">
+					<label for="form-nameSurname">Name Surname</label>
+					<input id="form-nameSurname" formControlName="Name" type="text" class="form-control" required>
+				</div>
+				<div class="col">
+					<label for="form-country">Country</label>
+					<select class="custom-select" formControlName="Country" id="form-country" required>
+						<option selected>Select...</option>
+						<option value="1">One</option>
+						<option value="2">Two</option>
+						<option value="3">Three</option>
+					</select>
 				</div>
 			</div>
-		</div>
+			<div class="row">
+				<div class="col">
+					<label for="form-email">Email</label>
+					<input id="form-email" formControlName="Email" type="email" class="form-control" required>
+				</div>
+				<div class="col">
+					<label for="form-address">Address</label>
+					<input id="form-address" formControlName="Address" type="text" class="form-control" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="form-group">
+						<label for="form-message">Message</label>
+						<textarea class="form-control" formControlName="Message" rows="4" id="form-message" required></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="form-group form-button-container">
+						<button class="main-button" (click)="sendFormClick()">SEND</button>
+					</div>
+				</div>
+			</div>
+		</form>
 	</div>
 </div>

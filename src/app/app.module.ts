@@ -18,6 +18,7 @@ import { NewsCardComponent } from './components/news-card/news-card.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactService } from './services/contact.service';
 import { ToastrModule } from 'ngx-toastr';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
 	declarations: [
@@ -35,6 +36,7 @@ import { ToastrModule } from 'ngx-toastr';
 		HttpClientModule,
 		BrowserAnimationsModule,
 		NgbModule,
+		ReactiveFormsModule,
 		ToastrModule.forRoot({
 			positionClass: 'toast-bottom-center'
 		})
