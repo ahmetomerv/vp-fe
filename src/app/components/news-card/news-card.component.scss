@@ -1,0 +1,25 @@
+.news-card {
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.card-text {
+	color: darkgrey;
+	font-size: .8em;
+	line-height: 1.8;
+}
+
+.card-info {
+	display: flex;
+	justify-content: space-between;
+
+	.like-count,
+	.view-count {
+		font-size: .8em;
+		color: grey;
+	}
+
+	.fas:before {
+		margin-right: .4em;
+	}
+}

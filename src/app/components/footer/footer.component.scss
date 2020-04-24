@@ -1,0 +1,22 @@
+footer {
+	background: #fff;
+	padding: .7em 0;
+
+	.footer-container {
+		display: flex;
+		justify-content: space-between;
+		width: 65%;
+		margin: 0 auto;
+
+		.footer-links {
+
+			a {
+				margin-left: 2em;
+
+				i {
+					color: #2a2a2a;
+				}
+			}
+		}
+	}
+}

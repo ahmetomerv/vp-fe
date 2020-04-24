@@ -1,0 +1,20 @@
+<header>
+	<div class="header-container">
+		<div class="header-logo-container">
+			<a href="https://veripark.com" class="veripark-logo">
+				<img src="./assets/icons/veripark-logo.png" alt="VeriPark Logo">
+			</a>
+		</div>
+		<div class="header-nav-container">
+			<div ngbDropdown class="d-inline-block" *ngFor="let menu of menuList">
+				<a [href]="menu.Url ? menu.Url : '#'" *ngIf="!menu.ParentId" ngbDropdownToggle>{{ menu.Name }}</a>
+				<div ngbDropdownMenu>
+					<a ngbDropdownItem *ngFor="let subMenu of menu.SubMenus" [href]="subMenu.Url ? subMenu.Url : '#'">{{ subMenu.Name }}</a>
+				</div>
+			</div>
+			<a href="#">
+				<img class="user-profile-picture" src="./assets/img/profile.png" alt="User profile Logo">
+			</a>
+		</div>
+	</div>
+</header>

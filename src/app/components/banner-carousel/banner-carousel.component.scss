@@ -1,0 +1,16 @@
+.carousel {
+	width: 1100px;
+	margin: 0 auto;
+
+	img {
+		max-width: 100%;
+	}
+
+	.carousel-caption {
+		background: rgba(#000, .5);
+		width: 100%;
+		right: unset;
+		bottom: 0;
+		left: unset;
+	}
+}

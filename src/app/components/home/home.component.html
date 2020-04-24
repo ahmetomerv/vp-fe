@@ -1,0 +1,14 @@
+<div class="container">
+
+	<app-banner-carousel [banners]="banners"></app-banner-carousel>
+
+	<h3>News</h3>
+
+	<div class="row news-cards-container">
+		<app-news-card *ngFor="let newsItem of newsList" [newsItem]="newsItem"></app-news-card>
+	</div>
+
+	<div class="row">
+		<app-contact></app-contact>
+	</div>
+</div>
